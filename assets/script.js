@@ -49,7 +49,7 @@ restart.addEventListener("click", () => {
 
 
 nextBtn.addEventListener("click", (displayNext = () => {
-    questionCount += 1:
+    questionCount += 1;
 
     if (questionCount == quizArray.length) {
         displayContainer.classList.add("hide");
