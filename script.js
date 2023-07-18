@@ -1,16 +1,18 @@
 let btnStuff = document.querySelector("#mainBtn"); //lol....button stuff
 let timeEl = document.querySelector("#time");
 var mainEl = document.querySelector(".mainBox");
+
 let secondsLeft = 10;
+
 let questions = {
-    one: "Does the first question work?",
-    two: "Is this the second question?",
-    three: "Well then, dont you feel silly now?",
-    four: "Thats okay! Im silly too. Do you wanna pass the quiz?"
+    one: "2 + 2 = 4",
+    two: "Lord of the Rings is pretty tight ngl",
+    three: "The bought and sold two party system is failing the United States",
+    four: "Prince can play the hell out of a guitar."
 }
 let quizAnswer = {
-    yes: "Yes",
-    no: "No"
+    yes: "True",
+    no: "False"
 }
 
 //This is to test connectivity to the html file.
@@ -49,10 +51,9 @@ function makeElement() {
     })
 
     answersNo.addEventListener("click", function(doom) {
-        doom = document.getElementById("boom").setAttribute("class", "display-test");
+        secondsLeft--;
        
-       return doom;
-
+     
    })
 
 
@@ -73,7 +74,7 @@ function setTime() {
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
             youLose();
-            // newMessage();
+            
         }
     }, 1000);
 
@@ -109,7 +110,7 @@ function questTwo() {
 
 
 
-    // wtfMain.setAttribute("class", "display-test");
+    
 }
 
 
