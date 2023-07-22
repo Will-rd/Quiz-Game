@@ -1,7 +1,49 @@
 body {
-    color: blue;
+    color: lemonchiffon;
+    background-color: #73AD21;
+    height: 100vh;
+    font-weight: bolder;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .display-test {
     display: none;
+}
+
+#mainBtn {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 80px;
+}
+
+#testing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ansBtn {
+    border-radius: 25px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+#mainBtn {
+    font-weight: bold;
+    
 }

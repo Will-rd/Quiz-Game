@@ -2,7 +2,7 @@ let btnStuff = document.querySelector("#mainBtn"); //lol....button stuff
 let timeEl = document.querySelector("#time");
 var mainEl = document.querySelector(".mainBox");
 
-let secondsLeft = 120;
+let secondsLeft = 45;
 
 let questions = {
     one: "What year did the Titanic sink?",
@@ -94,10 +94,7 @@ let quizAnswer = [
 ]
 
 //This is to test connectivity to the html file.
-console.log('All systems are go if there are no errors here!')
-
-
-
+console.log('All systems are go if there are no errors here!....kinda')
 
 
 
@@ -139,17 +136,17 @@ function makeElement() {
 
     let answer2 = document.createElement("button");
     answer2.setAttribute("id", "ans2");
-    answer2.setAttribute("class", "incorrect");
+    answer2.setAttribute("class", "ansBtn");
     answer2.textContent = quizAnswer[0].q1a2;
 
     let answer3 = document.createElement("button");
     answer3.setAttribute("id", "ans3");
-    answer3.setAttribute("class","incorrect");
+    answer3.setAttribute("class","ansBtn");
     answer3.textContent = quizAnswer[0].q1a3;
 
     let answer4 = document.createElement("button");
     answer4.setAttribute("id", "ans4");
-    answer4.setAttribute("class", "incorrect");
+    answer4.setAttribute("class", "ansBtn");
     answer4.textContent = quizAnswer[0].q1a4;
 
     let target1 = document.getElementById('testing')
@@ -184,7 +181,7 @@ function makeElement() {
 
     let wrongAnswer3 = document.getElementById('ans3');
 
-    wrongAnswer4.addEventListener("click", function() {
+    wrongAnswer3.addEventListener("click", function() {
         secondsLeft--;
         console.log("Incorrect!")
     })
@@ -196,17 +193,8 @@ function makeElement() {
 };
 
 
-
-// function bigQuizFunction() {
-    
-//     questTwo();
-//     console.log("were in here");
-// }
-
-
-
-
-//This is a function to change the text in the main element where the questions will be appended.
+//    This group of functions renders the text content of the question and answer buttons when the correct answer
+//is selected
 function questTwo() {
     console.log('question 2')
     const newMain = document.getElementById("testing");
@@ -274,7 +262,6 @@ function questTwo() {
 
 function questThree() {
     console.log('question 3')
-    console.log("question three")
     let threeMain = document.getElementById("testing");
     threeMain.innerHTML = questions.three;
 
@@ -910,9 +897,6 @@ function youLose() {
     document.body.appendChild(loseMessage);
     
 }
-
-
-
 
 
 //When the start button is clicked it will render the quiz element on the page and this also will begin the timer.
